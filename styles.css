@@ -1103,6 +1103,31 @@ footer {
 .social-links a img:hover {
     transform: scale(1.15);
     opacity: 0.8;
+	.site-credit {
+    margin-top: 12px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+    text-align: center;
 }
+
+.site-credit span {
+    color: #c8aa6e;
+    font-weight: 600;
+}
+
+.site-credit a {
+    color: #d13639;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.site-credit a:hover {
+    color: #ffffff;
+}
+
+
 
 
