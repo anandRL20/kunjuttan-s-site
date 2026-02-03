@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUNJUTTAN | VFX & Video Editing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Druk+Wide:wght@700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-animation">
+            <!-- REPLACE THIS: Add your animated GIF or video here -->
+            <!-- For GIF: <img src="your-loading-animation.gif" alt="Loading"> -->
+            <!-- For Video: <video autoplay loop muted playsinline><source src="your-loading-animation.mp4" type="video/mp4"></video> -->
+
+            <!-- Temporary fallback spinner (remove when you add your own) -->
+            <svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="50" fill="none" stroke="#d13639" stroke-width="8" stroke-linecap="round" stroke-dasharray="200 200" stroke-dashoffset="0">
+                    <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="1.5s" repeatCount="indefinite"/>
+                    <animate attributeName="stroke-dashoffset" values="0;-200" dur="1.5s" repeatCount="indefinite"/>
+                </circle>
+                <circle cx="60" cy="60" r="35" fill="none" stroke="#c8aa6e" stroke-width="6" stroke-linecap="round" stroke-dasharray="150 150" stroke-dashoffset="0">
+                    <animateTransform attributeName="transform" type="rotate" from="360 60 60" to="0 60 60" dur="2s" repeatCount="indefinite"/>
+                    <animate attributeName="stroke-dashoffset" values="0;150" dur="2s" repeatCount="indefinite"/>
+                </circle>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Particles Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">KUNJUTTAN VFX</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">KUNJUTTAN</h1>
+            <div class="hero-subtitle">VFX & Video Editing</div>
+            <p class="hero-description">
+                Crafting cinematic experiences through cutting-edge visual effects and masterful editing.
+                Bringing stories to life with precision, creativity, and passion.
+            </p>
+            <a href="#portfolio" class="cta-button">View My Work</a>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Transforming visions into visual masterpieces</p>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I'm Kunjuttan, a passionate VFX artist and video editor dedicated to pushing the boundaries
+                        of visual storytelling. With years of experience in the industry, I specialize in creating
+                        stunning visual effects and seamless edits that captivate audiences.
+                    </p>
+                    <p>
+                        My work combines technical expertise with artistic vision, ensuring every project delivers
+                        maximum impact. From explosive action sequences to subtle atmospheric enhancements, I bring
+                        creative solutions to every challenge.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-title">Visual Effects</div>
+                        <div class="skill-description">
+                            Compositing, motion tracking, particle systems, and photorealistic CGI integration
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-title">Video Editing</div>
+                        <div class="skill-description">
+                            Color grading, timing, transitions, and narrative-driven post-production
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-title">Motion Graphics</div>
+                        <div class="skill-description">
+                            Dynamic animations, title sequences, and branded content creation
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-title">Post-Production</div>
+                        <div class="skill-description">
+                            Sound design integration, mastering, and final delivery optimization
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-container">
+            <h2 class="section-title">Portfolio</h2>
+            <p class="section-subtitle">My Works</p>
+
+            <div class="video-grid">
+                <!-- Video 1 - Portrait -->
+                <div class="video-card portrait">
+                    <div class="video-thumbnail">
+                        <video autoplay loop muted playsinline class="portfolio-video">
+                            <source src="videos/video1.mp4" type="video/mp4">
+                            <source src="videos/video1.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button class="mute-button" onclick="toggleMute(this)">
+                            <span class="mute-icon">🔇</span>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-category">VFX / Editing</div>
+                        <div class="video-title">Project 1</div>
+                    </div>
+                </div>
+
+                <!-- Video 2 - Portrait -->
+                <div class="video-card portrait">
+                    <div class="video-thumbnail">
+                        <video autoplay loop muted playsinline class="portfolio-video">
+                            <source src="videos/video2.mp4" type="video/mp4">
+                            <source src="videos/video2.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button class="mute-button" onclick="toggleMute(this)">
+                            <span class="mute-icon">🔇</span>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-category">Motion Graphics</div>
+                        <div class="video-title">Project 2</div>
+                    </div>
+                </div>
+
+                <!-- Video 3 - Portrait -->
+                <div class="video-card portrait">
+                    <div class="video-thumbnail">
+                        <video autoplay loop muted playsinline class="portfolio-video">
+                            <source src="videos/video3.mp4" type="video/mp4">
+                            <source src="videos/video3.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button class="mute-button" onclick="toggleMute(this)">
+                            <span class="mute-icon">🔇</span>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-category">Color Grading</div>
+                        <div class="video-title">Project 3</div>
+                    </div>
+                </div>
+
+                <!-- Video 4 - Landscape -->
+                <div class="video-card landscape">
+                    <div class="video-thumbnail">
+                        <video autoplay loop muted playsinline class="portfolio-video">
+                            <source src="videos/video4.mp4" type="video/mp4">
+                            <source src="videos/video4.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button class="mute-button" onclick="toggleMute(this)">
+                            <span class="mute-icon">🔇</span>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-category">VFX / Compositing</div>
+                        <div class="video-title">Project 4</div>
+                    </div>
+                </div>
+
+                <!-- Video 5 - Landscape -->
+                <div class="video-card landscape">
+                    <div class="video-thumbnail">
+                        <video autoplay loop muted playsinline class="portfolio-video">
+                            <source src="videos/video5.mp4" type="video/mp4">
+                            <source src="videos/video5.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button class="mute-button" onclick="toggleMute(this)">
+                            <span class="mute-icon">🔇</span>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-category">Post-Production</div>
+                        <div class="video-title">Project 5</div>
+                    </div>
+                </div>
+
+                <!-- Video 6 - Landscape -->
+                <div class="video-card landscape">
+                    <div class="video-thumbnail">
+                        <video autoplay loop muted playsinline class="portfolio-video">
+                            <source src="videos/video6.mp4" type="video/mp4">
+                            <source src="videos/video6.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button class="mute-button" onclick="toggleMute(this)">
+                            <span class="mute-icon">🔇</span>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-category">Video Editing</div>
+                        <div class="video-title">Project 6</div>
+                    </div>
+                </div>
+
+                <!-- Video 7 - Landscape -->
+                <div class="video-card landscape">
+                    <div class="video-thumbnail">
+                        <video autoplay loop muted playsinline class="portfolio-video">
+                            <source src="videos/video7.mp4" type="video/mp4">
+                            <source src="videos/video7.webm" type="video/webm">
+                            Your browser does not support the video tag.
+                        </video>
+                        <button class="mute-button" onclick="toggleMute(this)">
+                            <span class="mute-icon">🔇</span>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-category">VFX / Editing</div>
+                        <div class="video-title">Project 7</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="section-subtitle">
+                Ready to bring your vision to life? Get in touch and let's create something extraordinary
+            </p>
+            <div class="contact-buttons">
+                <a href="mailto:your-email@example.com" class="contact-button">Email Me</a>
+                <a href="#" class="contact-button">View Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.youtube.com/@kunjuttanfx" title="YouTube">▶</a>
+                <a href="https://www.instagram.com/kunjuttan.fx/" title="Instagram">🅾</a>
+                <a href="#" title="LinkedIn">in</a>
+                <a href="#" title="Twitter">🐦</a>
+            </div>
+            <p>© 2025 KUNJUTTAN. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript (loaded at end of body so HTML is ready) -->
+    <script src="script.js"></script>
+</body>
+</html>
